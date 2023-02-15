@@ -1,10 +1,13 @@
 import { useState } from "react";
-import Login from "./components/Login";
+import {Login} from "./components/Login";
 
 function App() {
-  const [count, setCount] = useState(0);
+  // const [count, setCount] = useState(0);
 
-  return <Login />;
+  return(
+      <Login />
+  )
+
 }
 
 export default App;

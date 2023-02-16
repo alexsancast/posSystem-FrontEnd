@@ -6,34 +6,40 @@ import * as Yup from 'yup'
 
 
 
+export const Login = (Formik) => {
 
-export const Login = () => {
 
-    const formik = useFormik(
-        {
-            initialValues:
-                {
-                    username: '',
-                    password: '',
-
-                },
-
-            validationSchema: Yup.object({
-
-                username: Yup.string().min(4,"El usuario esta muy corto").max(10,"El usurio tiene demaciado letras").required('El usuario es requerido'),
-
-                password: Yup.string().min(8,"El password esta muy corto").required('La contaseña es neceraria'),
-            }),
-
-            onSubmit: (formData) => {
-                console.log(JSON.stringify(formData, null, 2));
-            },
-
-        })
+    //Incializacion con Formik y Validacion con Yup
+    // const formik = useFormik(
+    //     {
+    //        //Inicializamos las campos vacios
+    //         initialValues:
+    //             {
+    //                 username: '',
+    //                 password: '',
+    //
+    //             },
+    //
+    //         //Este es sistemas de validacion que usa YUP
+    //         validationSchema: Yup.object({
+    //
+    //             username: Yup.string().min(4,"El usuario esta muy corto").max(10,"El usurio tiene demaciado letras").required('El usuario es requerido'),
+    //
+    //             password: Yup.string().min(8,"El password esta muy corto").required('La contaseña es neceraria'),
+    //         }),
+    //
+    //         //onSubmit para enviar el formulario de Formik
+    //         onSubmit: (formData) => {
+    //             console.log(JSON.stringify(formData, null, 2));
+    //         },
+    //
+    //     })
 
 
     return (
 
+        //renderizado con semantic-ui-react
+        //Este contenedor es para renderizar los componentes del Login
         <Container>
 
             <h1>L O G I N</h1>

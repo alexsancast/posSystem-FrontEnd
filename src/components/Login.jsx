@@ -1,43 +1,40 @@
 import React from "react";
-import {Form,Button,Container} from "semantic-ui-react";
-import {ErrorMessage, Field, Formik, useFormik} from 'formik';
+import {Form, Button, Container} from "semantic-ui-react";
+import {useFormik} from 'formik';
 import * as Yup from 'yup'
+
+
+
 
 
 export const Login = () => {
 
-    const formik = useFormik({
-        initialValues: {
-            username: '',
-            password: '',
+    const formik = useFormik(
+        {
+            initialValues:
+                {
+                    username: '',
+                    password: '',
 
-        },
+                },
 
-        validationSchema: Yup.object({
-            username: Yup.string().required('El usuario es requerido'),
-            password: Yup.string().required('La contaseña es neceraria'),
-        }),
+            validationSchema: Yup.object({
 
-        onSubmit: (formData) => {
-            console.log(JSON.stringify(formData, null, 2));
-        },
+                username: Yup.string().min(4,"El usuario esta muy corto").max(10,"El usurio tiene demaciado letras").required('El usuario es requerido'),
 
-    })
+                password: Yup.string().min(8,"El password esta muy corto").required('La contaseña es neceraria'),
+            }),
+
+            onSubmit: (formData) => {
+                console.log(JSON.stringify(formData, null, 2));
+            },
+
+        })
 
 
     return (
 
-        <Container
-
-            style={{
-                textAlign: "center",
-                display: "flex",
-                alignItems: "center",
-                flexDirection: "column",
-                justifyContent: "center",
-                height: "100vh"
-
-            }}>
+        <Container>
 
             <h1>L O G I N</h1>
 
@@ -52,7 +49,7 @@ export const Login = () => {
                     error={formik.errors.username}
                 />
                 <Form.Input
-                    type='text'
+                    type='password'
                     icon="lock"
                     iconPosition="left"
                     placeholder='**********'
@@ -69,4 +66,7 @@ export const Login = () => {
         </Container>
     );
 }
+
+
+
 

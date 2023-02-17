@@ -4,36 +4,42 @@ import {useFormik} from 'formik';
 import * as Yup from 'yup'
 
 
+function handleLogin(data){
+
+    console.log("Usename: " + data.username +  " Password: " + data.password)
 
 
-export const Login = (Formik) => {
+}
+
+export const Login = () => {
 
 
     //Incializacion con Formik y Validacion con Yup
-    // const formik = useFormik(
-    //     {
-    //        //Inicializamos las campos vacios
-    //         initialValues:
-    //             {
-    //                 username: '',
-    //                 password: '',
-    //
-    //             },
-    //
-    //         //Este es sistemas de validacion que usa YUP
-    //         validationSchema: Yup.object({
-    //
-    //             username: Yup.string().min(4,"El usuario esta muy corto").max(10,"El usurio tiene demaciado letras").required('El usuario es requerido'),
-    //
-    //             password: Yup.string().min(8,"El password esta muy corto").required('La contaseña es neceraria'),
-    //         }),
-    //
-    //         //onSubmit para enviar el formulario de Formik
-    //         onSubmit: (formData) => {
-    //             console.log(JSON.stringify(formData, null, 2));
-    //         },
-    //
-    //     })
+    const formik = useFormik(
+        {
+           //Inicializamos las campos vacios
+            initialValues:
+                {
+                    username: '',
+                    password: '',
+
+                },
+
+            //Este es sistemas de validacion que usa YUP
+            validationSchema: Yup.object({
+
+                username: Yup.string().min(4,"El usuario esta muy corto").max(10,"El usurio tiene demaciado letras").required('El usuario es requerido'),
+
+                password: Yup.string().min(8,"El password esta muy corto").required('La contaseña es neceraria'),
+            }),
+
+            //onSubmit para enviar el formulario de Formik
+            onSubmit: (formData) => {
+                handleLogin(formData)
+                // console.log(JSON.stringify(formData, null, 2));
+            },
+
+        })
 
 
     return (

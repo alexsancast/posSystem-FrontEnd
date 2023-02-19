@@ -1,7 +1,17 @@
 @use "variable";
 
-.container-login{
-    background: red;
-    width: 10px;
+.form{
+    width: 35%;
+    margin: auto;
+    height: 25rem;
+    justify-content: center;
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+    background: white;
+    box-shadow: 1px 3px 26px 0px rgba(0,0,0,0.75);
+    border-radius: 15px;
+    
+  
 }
 

@@ -1,41 +1,65 @@
+import { Formik , useFormik } from "formik";
 import React from "react";
-import { Form, Button, Container } from "semantic-ui-react";
-import { useFormik } from "formik";
-import * as Yup from "yup";
+import "../sass/login.scss";
+import loginSchema from "../schemas/validations";
 
 
+//Si el usuarios digito bien los datos
+const onSubmit = () =>{
+  console.log("Submitted!");
+}
 
-export const Login = ({formik}) => {
-  //Incializacion con Formik y Validacion con Yup
+export const Login = () => {
+  //Libreria formik para la validacion de los campos
+  const {values ,errors, handleBlur , handleChange , handleSubmit} = useFormik ({
+    initialValues:{
+      username: "",
+      password: ""
+    } ,
+
+    validationSchema : loginSchema ,
+    onSubmit, 
 
 
+  })
+
+  console.log(errors);
 
   return (
-    //renderizado con semantic-ui-react
-    //Este contenedor es para renderizar los componentes del Login
+    <>
+      <form onSubmit={handleSubmit} className="form" action="">
+        <h1>Entrar</h1>
 
-    <Container>
-      <h1>Login</h1>
+        <div className="form-container">
+          <div className="form-control">
+            <label id="username" htmlFor=""></label>
+            <input
+              name="username"
+              type="text"
+              value={values.username}
+              onChange={handleChange}
+ 
+            />
+            { <p>{errors.username}</p> }
+          </div>
 
-      <Form onSubmit={formik.handleSubmit}>
-        <Form.Input
-          type="text"
-          placeholder="Fmartinez"
-          name="username"
-          onChange={formik.handleChange}
-          error={formik.errors.username}
-          
-        />
-        <Form.Input
-          type="password"
-          placeholder="**********"
-          name="password"
-          onChange={formik.handleChange}
-          error={formik.errors.password}
-        />
+          <div className="form-control">
+            <label id="password" htmlFor=""></label>
+            <input
+              name="password"
+              type="password"
+              value={values.password}
+              onChange={handleChange}
+        
+            />
+             { <p>{errors.password}</p> }
+          </div>
 
-        <Button type="submit"> Entrar </Button>
-      </Form>
-    </Container>
+          <button type="submit">Entrar</button>
+        </div>
+      </form>
+    </>
+
+   
   );
 };

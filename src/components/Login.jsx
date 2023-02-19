@@ -26,7 +26,7 @@ export const Login = () => {
   console.log(errors);
 
   return (
-    <>
+    <div className="container">
       <form onSubmit={handleSubmit} className="form" action="">
         <h1>Entrar</h1>
 
@@ -58,7 +58,7 @@ export const Login = () => {
           <button type="submit">Entrar</button>
         </div>
       </form>
-    </>
+      </div>
 
    
   );

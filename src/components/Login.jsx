@@ -32,7 +32,7 @@ export const Login = () => {
 
         <div className="form-container">
           <div className="form-control">
-            <label id="username" htmlFor=""></label>
+            <label id="username" htmlFor="">Usuario:</label>
             <input
               name="username"
               type="text"
@@ -44,7 +44,7 @@ export const Login = () => {
           </div>
 
           <div className="form-control">
-            <label id="password" htmlFor=""></label>
+            <label id="password" htmlFor="">Contraseña:</label>
             <input
               name="password"
               type="password"

@@ -41,8 +41,7 @@ export const Login = () => {
               onChange={handleChange}
             />
              <label className="form__label" id="username" htmlFor="">Usuario:</label>
-             
-            { <p>{errors.username}</p> }
+            { <p className="form__p">{errors.username}</p> }
             <span className="form__line"></span>
           </div>
 
@@ -59,7 +58,7 @@ export const Login = () => {
             />
             <label className="form__label" id="password" htmlFor="">Contraseña:</label>
             <span className="form__line"></span> 
-             { <p>{errors.password}</p> }
+             { <p className="form__p">{errors.password}</p> }
           </div>
 
           <button className="form__submit" type="submit">Entrar</button>

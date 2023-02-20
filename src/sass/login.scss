@@ -1,135 +1,108 @@
 @use "variable";
 
-.container{
-  
-    min-height: 100vh;
-    display: flex;
-    background: green;
-    background-image: url("/src/assets/backLogin.jpg");
-    background-size: cover;
-    background-attachment: fixed;
-
-
-
+.container {
+  min-height: 100vh;
+  display: flex;
+  background: green;
+  background-image: url("/src/assets/backLogin.jpg");
+  background-size: cover;
+  background-attachment: fixed;
 }
 
-.form{
-    text-align: center;
-    width: 90%;
-    max-width: 400px;
-    margin: auto;
-    padding:4.5em 3em  ;
-    background-color: white;
-    box-shadow: 0px 5px 10px -5px rgba(0 0 0 / 30% );
-    //1 en x , 3 en y , 26 en blur , spring 0 
-    border-radius: 10px;
+.form {
+  text-align: center;
+  width: 90%;
+  max-width: 400px;
+  margin: auto;
+  padding: 4.5em 3em;
+  background-color: white;
+  box-shadow: 0px 5px 10px -5px rgba(0 0 0 / 30%);
+  //1 en x , 3 en y , 26 en blur , spring 0
+  border-radius: 10px;
 
-    .form__title{
-        font-size: 2rem;
-        margin-bottom: .5em;
+  .form__title {
+    font-size: 2rem;
+    margin-bottom: 0.5em;
+  }
 
-    }
-    
-    .form__container{
-        margin-top: 3em;
-        display: grid;
-        gap: 2.5em;
+  .form__container {
+    margin-top: 3em;
+    display: grid;
+    gap: 2.5em;
+
+    .form__control {
+      position: relative;
+      color: red;
+
+      .form__input {
+        width: 100%;
+        background: none;
+        color: rgb(160, 155, 155);
+        font-size: 1.4rem;
+        padding: 0.6em 0.3em;
+        border: none;
+        outline: none;
+        border-bottom: 1px solid black;
 
 
-
-        .form__control{
-            position: relative;
-            color: red;
-
-
-
-            .form__input{
-                width: 100%;
-                background:none;
-                color: rgb(160, 155, 155);
-                font-size: 1.4rem;
-                padding: .6em .3em ;
-                border: none;
-                outline: none;
-                border-bottom: 1px solid black ;
-                
-
-                &:focus + .form__label, &:not(:placeholder-shown) + .form__label {
-                    transform: translateY(-12px) scale(.8);
-                    transform-origin: left top;
-                    color:#7AE410;
-
-                }
-
-                &:focus ~ .form__line, &:not(:placeholder-shown) ~ .form__line {
-                   transform: scale(0);
-
-                }
-
-            }
-
-            .form__label{
-                color: #cfd1ce;
-                font-size: 1.4em;
-                cursor: pointer;
-                position: absolute;
-                left: 5px;
-                top: 0;
-                transform: translateY(5px);
-                transition: transform .5s ,color .3s ;
-            }
-
-           .form__line{
-            position: absolute;
-            bottom: 0px;
-            left: 0;
-            width: 100%;
-            height: 1px;
-            background-color: red;
-            transform: scale(0);
-            transform: left bottom;
-            transition: transform .4s;
-            
-           }
-
-         
-
-       
-        
-
-            
-
+        //Animaciones para los inputs , focus
+        &:focus + .form__label,
+        &:not(:placeholder-shown) + .form__label {
+          transform: translateY(-12px) scale(0.8);
+          transform-origin: left top;
+          color: #7ae410;
         }
 
-        .form__submit{
-            background: #7AE410;
-            color: black;
-            font-weight: 400;
-            font-size: 1.5rem;
-            padding: .8em 0;
-            border: none;
-            border-radius: 5em;
-            transition: all 300ms;
-           
-            &:hover{
-                cursor: pointer;
-                background: #93f036;
-            }
-
-
-
-
-
+        &:focus ~ .form__line,
+        &:not(:placeholder-shown) ~ .form__line {
+          transform: scale(1);
+          background:  #7ae410;;
         }
+      }
+
+      .form__label {
+        color: #cfd1ce;
+        font-size: 1.4em;
+        cursor: pointer;
+        position: absolute;
+        left: 5px;
+        top: 0;
+        transform: translateY(5px);
+        transition: transform 0.5s, color 0.3s;
+      }
+
+      .form__p{
+        color: blue;
+        position: absolute;
+      }
+
+      .form__line {
+        position: absolute;
+        bottom: 0px;
+        left: 0;
+        width: 100%;
+        height: 1px;
+        background-color: red;
+        transform: scale(0);
+        transform: left bottom;
+        transition: transform 0.4s;
+      }
     }
 
+    .form__submit {
+      background: #7ae410;
+      color: black;
+      font-weight: 400;
+      font-size: 1.5rem;
+      padding: 0.8em 0;
+      border: none;
+      border-radius: 5em;
+      transition: all 300ms;
 
-    
-
- 
-
-
-    
-  
+      &:hover {
+        cursor: pointer;
+        background: #93f036;
+      }
+    }
+  }
 }
-

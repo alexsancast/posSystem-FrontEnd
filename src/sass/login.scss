@@ -46,12 +46,13 @@
             .form__input{
                 width: 100%;
                 background:none;
-                color: rgb(236, 225, 225);
-                font-size: 1rem;
+                color: rgb(160, 155, 155);
+                font-size: 1.4rem;
                 padding: .6em .3em ;
                 border: none;
                 outline: none;
                 border-bottom: 1px solid black ;
+                
 
                 &:focus + .form__label, &:not(:placeholder-shown) + .form__label {
                     transform: translateY(-12px) scale(.8);
@@ -69,7 +70,7 @@
 
             .form__label{
                 color: #cfd1ce;
-                font-size: 1.1em;
+                font-size: 1.4em;
                 cursor: pointer;
                 position: absolute;
                 left: 5px;
@@ -108,6 +109,14 @@
             padding: .8em 0;
             border: none;
             border-radius: 5em;
+            transition: all 300ms;
+           
+            &:hover{
+                cursor: pointer;
+                background: #93f036;
+            }
+
+
 
 
 

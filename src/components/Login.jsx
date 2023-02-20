@@ -2,6 +2,10 @@ import { Formik , useFormik } from "formik";
 import React from "react";
 import "../sass/login.scss";
 import loginSchema from "../schemas/validations";
+import { FcHighPriority ,FcOk } from "react-icons/fc";
+
+
+
 
 
 //Si el usuarios digito bien los datos
@@ -40,6 +44,7 @@ export const Login = () => {
               value={values.username}
               onChange={handleChange}
             />
+         
              <label className="form__label" id="username" htmlFor="">Usuario:</label>
             { <p className="form__p">{errors.username}</p> }
             <span className="form__line"></span>
@@ -56,9 +61,10 @@ export const Login = () => {
               onChange={handleChange}
         
             />
+          
             <label className="form__label" id="password" htmlFor="">Contraseña:</label>
             <span className="form__line"></span> 
-             { <p className="form__p">{errors.password}</p> }
+              
           </div>
 
           <button className="form__submit" type="submit">Entrar</button>

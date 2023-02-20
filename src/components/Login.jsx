@@ -28,35 +28,43 @@ export const Login = () => {
   return (
     <div className="container">
       <form onSubmit={handleSubmit} className="form" action="">
-        <h1>Entrar</h1>
-
-        <div className="form-container">
-          <div className="form-control">
-            <label id="username" htmlFor="">Usuario:</label>
+        <h1 className="form__title">Iniciar Sesion</h1>
+        <div className="form__container">
+          <div className="form__control">
+           
             <input
+            className="form__input"
               name="username"
               type="text"
+              placeholder=""
               value={values.username}
               onChange={handleChange}
- 
             />
+             <label className="form__label" id="username" htmlFor="">Usuario:</label>
+             
             { <p>{errors.username}</p> }
+            <span className="form__line"></span>
           </div>
 
-          <div className="form-control">
-            <label id="password" htmlFor="">Contraseña:</label>
+          <div className="form__control">
+           
             <input
+            className="form__input"
               name="password"
               type="password"
+              placeholder=""
               value={values.password}
               onChange={handleChange}
         
             />
+            <label className="form__label" id="password" htmlFor="">Contraseña:</label>
+            <span className="form__line"></span> 
              { <p>{errors.password}</p> }
           </div>
 
-          <button type="submit">Entrar</button>
+          <button className="form__submit" type="submit">Entrar</button>
         </div>
+        
       </form>
       </div>
 

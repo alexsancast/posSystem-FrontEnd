@@ -1,8 +1,8 @@
 @use "variable";
 
 .container{
-    width: 100%;
-    height: 100vh;
+  
+    min-height: 100vh;
     display: flex;
     background: green;
     background-image: url("/src/assets/backLogin.jpg");
@@ -14,24 +14,114 @@
 }
 
 .form{
-    width: 25%;
+    text-align: center;
+    width: 90%;
+    max-width: 400px;
     margin: auto;
-    height: 25rem;
-    justify-content: center;
-    align-items: center;
-    display: flex;
-    flex-direction: column;
-    background: white;
-    box-shadow: 1px 3px 26px 0px rgba(0,0,0,0.75);
-    border-radius: 15px;
+    padding:4.5em 3em  ;
+    background-color: white;
+    box-shadow: 0px 5px 10px -5px rgba(0 0 0 / 30% );
+    //1 en x , 3 en y , 26 en blur , spring 0 
+    border-radius: 10px;
 
+    .form__title{
+        font-size: 2rem;
+        margin-bottom: .5em;
 
-    .form-container {
-
-        display: flex;
-        flex-direction: column;
-        
     }
+    
+    .form__container{
+        margin-top: 3em;
+        display: grid;
+        gap: 2.5em;
+
+
+
+        .form__control{
+            position: relative;
+            color: red;
+
+
+
+            .form__input{
+                width: 100%;
+                background:none;
+                color: rgb(236, 225, 225);
+                font-size: 1rem;
+                padding: .6em .3em ;
+                border: none;
+                outline: none;
+                border-bottom: 1px solid black ;
+
+                &:focus + .form__label, &:not(:placeholder-shown) + .form__label {
+                    transform: translateY(-12px) scale(.7);
+                    transform-origin: left top;
+                    color: red;
+
+                }
+
+                &:focus ~ .form__line, &:not(:placeholder-shown) ~ .form__line {
+                   transform: scale(1);
+
+                }
+
+            }
+
+            .form__label{
+                color: royalblue;
+                cursor: pointer;
+                position: absolute;
+                left: 5px;
+                top: 0;
+                transform: translateY(10px);
+                transition: transform .5s ,color .3s ;
+            }
+
+           .form__line{
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 100%;
+            height: 1px;
+            background-color: red;
+            transform: scale(0);
+            transform: left bottom;
+            transition: transform .4s;
+            
+           }
+
+           .form__p{
+            position: absolute;
+            color: blue;
+           }
+
+       
+        
+
+            
+
+        }
+
+        .form__submit{
+            background: red;
+            color: white; 
+            font-weight: 300;
+            font-size: 1rem;
+            padding: .8em 0;
+            border: none;
+            border-radius: 5em;
+
+
+
+        }
+    }
+
+
+    
+
+ 
+
+
     
   
 }

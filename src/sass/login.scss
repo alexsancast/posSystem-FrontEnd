@@ -62,13 +62,15 @@
 
       .form__label {
         color: #cfd1ce;
-        font-size: 1.4em;
+        font-size: 1.2em;
         cursor: pointer;
         position: absolute;
         left: 5px;
         top: 0;
         transform: translateY(5px);
         transition: transform 0.5s, color 0.3s;
+
+    
       }
 
       .form__p{
@@ -87,6 +89,36 @@
         transform: left bottom;
         transition: transform 0.4s;
       }
+
+      .form__input-icon{
+        display: none;  
+      }
+      
+   
+      .form__input-error{
+        visibility: visible;
+        position: absolute;
+        top: 17px;
+        right: 35px;
+      }
+
+      .form__input-icon2{
+        display: none;  
+      }
+      
+   
+      .form__input-error2{
+        visibility: visible;
+        position: absolute;
+        top: 17px;
+        right: 35px;
+      }
+      
+      
+
+  
+
+
     }
 
     .form__submit {

@@ -6,12 +6,12 @@ const pssRules = '/^(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{5,}$/';
 //Schema para la validacion de los campos
 const loginSchema = yup.object().shape({
     username: yup.string()
-        .min(6, "El usuario esta muy corto")
-        .required("Este campo es requerido"),
+        .min(6, "Caracteres minimo de 6 ")
+        .required(""),
 
       password: yup.string()
-        .min(8, "La clave esta muy corta")
-        .required("Este campo es requerido"),
+        .min(8, "Contrasena minima de 8 ")
+        .required(""),
 });
 
 

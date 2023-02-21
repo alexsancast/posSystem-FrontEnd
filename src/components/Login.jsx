@@ -44,9 +44,13 @@ export const Login = () => {
               value={values.username}
               onChange={handleChange}
             />
+           
          
              <label className="form__label" id="username" htmlFor="">Usuario:</label>
-            { <p className="form__p">{errors.username}</p> }
+             {/* <FcOk className={errors.username ? "form__input-error " : "form__input-success"} /> */}
+             {/* <FcHighPriority className={!errors.username ?  "form__input-icon" : "form__input-error"}/>
+            
+            { <p className="form__p">{errors.username}</p> } */}
             <span className="form__line"></span>
           </div>
 
@@ -61,8 +65,11 @@ export const Login = () => {
               onChange={handleChange}
         
             />
+       
           
             <label className="form__label" id="password" htmlFor="">Contraseña:</label>
+            {/* <FcHighPriority className={!errors.password ?  "form__input-icon2" : "form__input-error2"}/>
+            { <p className="form__p">{errors.password}</p> } */}
             <span className="form__line"></span> 
               
           </div>

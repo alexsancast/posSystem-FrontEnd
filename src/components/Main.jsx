@@ -2,10 +2,13 @@ import React from "react";
 import "../sass/main.scss";
 import { GiHamburgerMenu } from "react-icons/gi";
 import { FaUserCircle } from "react-icons/fa";
-import { TbTableExport } from "react-icons/tb";
-import { SlBasketLoaded } from "react-icons/sl";
+import { RiTableAltFill } from "react-icons/ri";
+import { FaMoneyBill } from "react-icons/fa";
 
-SlBasketLoaded
+
+
+
+
 
 
 const Main = () => {
@@ -30,12 +33,12 @@ const Main = () => {
           </div>
 
           <div className= "container__main-menu container__menu">
-            <TbTableExport size="1.7em"/>
+            <RiTableAltFill className="main__icon" size="1.7em"/>
             <p className="main__label-menu">Tablero principal</p>
           </div>
 
           <div className= "container__caja-menu container__menu">
-             <SlBasketLoaded size="1.7em"/>
+             <FaMoneyBill className="main__icon" size="1.7em"/>
             <p className="main__label-menu">Caja</p>
           </div>
 

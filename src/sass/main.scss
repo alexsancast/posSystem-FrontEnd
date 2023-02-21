@@ -17,6 +17,7 @@
     background: variable.$system-color;
     height: 100vh;
     padding: 0.8em;
+    gap: 23em;
 
     .container__username-profile {
       display: flex;
@@ -30,6 +31,7 @@
       .main__label-username {
         font-family: variable.$title-font;
         font-size: 1.2em;
+        color: white;
       }
     }
 
@@ -38,11 +40,20 @@
       gap: 0.8em;
       align-items: center;
       padding: 1.5em 0;
+
+      &:hover{
+        cursor: pointer;
+      }
     }
 
     .main__label-menu {
       font-family: variable.$title-font;
       font-size: 1.1em;
+      color: white;
+    }
+
+    .main__icon{
+        color: white;
     }
   }
 }

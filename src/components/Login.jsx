@@ -8,7 +8,7 @@ import { FcHighPriority ,FcOk } from "react-icons/fc";
 
 
 
-//Si el usuarios digito bien los datos
+//Si el usuarios digito bien los datos procede a validar con la DB
 const onSubmit = () =>{
   console.log("Submitted!");
 }
@@ -27,7 +27,7 @@ export const Login = () => {
 
   })
 
-  console.log(errors);
+
 
   return (
     <div className="container">
@@ -74,7 +74,7 @@ export const Login = () => {
               
           </div>
 
-          <button className="form__submit" type="submit">Entrar</button>
+          <button className="form__submit" type="submit" >Entrar</button>
         </div>
         
       </form>

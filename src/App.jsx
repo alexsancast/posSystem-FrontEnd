@@ -3,17 +3,11 @@ import { useFormik } from "formik";
 import * as Yup from "yup";
 import Main from "./components/Main";
 
-
 function App() {
-  
   return (
-      
-      
-     <Main/>
-    // <Login/> 
- 
-    
-  ) ;
+    <Main />
+    // <Login/>
+  );
 }
 
 export default App;

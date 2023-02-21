@@ -21,7 +21,9 @@ const Main = () => {
   return <div className="container__main">
 
           
-         <div className="container__bar-horizontal"><GiHamburgerMenu className="main__icon" size="2.5em"/>
+         <div className="container__bar-horizontal">
+            <GiHamburgerMenu className="main__icon" size="2.5em"/>
+            <h1 className="title__homepage">Bienvenidos a Dragon Lite</h1>
          
          </div>
 

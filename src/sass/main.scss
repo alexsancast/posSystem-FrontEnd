@@ -10,6 +10,19 @@
     background: variable.$system-color;
     height: 4em;
     padding: 1em 1em;
+    display: flex;
+    gap: 15em;
+    align-items: center;
+
+    .title__homepage{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-family: variable.$title-font;
+        color: white;
+    }
+    
+    
   }
 
   .container__bar-vertical {

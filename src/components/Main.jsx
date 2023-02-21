@@ -22,14 +22,13 @@ const Main = () => {
 
           
          <div className="container__bar-horizontal">
-            <GiHamburgerMenu className="main__icon" size="2.5em"/>
+            <GiHamburgerMenu className="main__icon   " size="2.5em"/>
             <h1 className="title__homepage">Bienvenidos a Dragon Lite</h1>
          
          </div>
 
       
-
-
+          
          <div className="container__bar-vertical">
 
           <div className="container__username-profile">

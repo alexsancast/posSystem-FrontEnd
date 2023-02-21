@@ -60,9 +60,11 @@
       font-family: variable.$title-font;
       font-size: 1.1em;
       color: white;
+      transition: all 300ms;
 
       &:hover{
         cursor: pointer;
+        color: rgb(228, 199, 199);
       }
     }
 
@@ -70,5 +72,11 @@
   }
   .main__icon{
     color: white;
+
+    &:hover{
+        cursor: pointer;
+        color: rgb(228, 199, 199);
+
+    }
 }
 }

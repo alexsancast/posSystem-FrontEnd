@@ -3,32 +3,51 @@ import React from "react";
 import "../sass/login.scss";
 import loginSchema from "../schemas/validations";
 import axios from "axios";
+import { ToastContainer, toast } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
 
 // import { FcHighPriority ,FcOk } from "react-icons/fc";
 
 
+//Notificacion de error sin las credenciales estan erroneas
 
-
+const notify = () =>toast.error('🦄 Error al iniciar sesión. Verifique sus credenciales.!', {
+    position: "top-center",
+    autoClose: 5000,
+    hideProgressBar: false,
+    closeOnClick: true,
+    pauseOnHover: true,
+    draggable: true,
+    progress: undefined,
+    theme: "dark",
+});
 
 //Si el usuarios digito bien los datos
+
 const onSubmit = (event) => {
+
   event.preventDefault();
+
 
    const username = event.target.elements.username.value;
    const password = event.target.elements.password.value;
 
-  // axios.post('/api/login', { username, password })
-  //     .then(response => {
-  //       // Almacenar el token de autenticación en el almacenamiento local o de sesión del navegador
-  //       localStorage.setItem('token', response.data.token);
-  //
-  //       // Redirigir al usuario a la página principal de la aplicación
-  //       window.location.href = '/';
-  //     })
-  //     .catch(error => {
-  //       // Mostrar un mensaje de error al usuario
-  //       alert('Error al iniciar sesión. Verifique sus credenciales.');
-  //     });
+  axios.post('/api/login', { username, password })
+      .then(response => {
+        // Almacenar el token de autenticación en el almacenamiento local o de sesión del navegador
+        localStorage.setItem('token', response.data.token);
+
+
+        // Redirigir al usuario a la página principal de la aplicación
+        window.location.href = '/';
+
+
+      })
+      .catch(error => {
+        // Mostrar un mensaje de error al usuario
+          notify()
+        // alert('Error al iniciar sesión. Verifique sus credenciales.');
+      });
 
 
     console.log(username)
@@ -45,24 +64,26 @@ export const Login = () => {
 
      validationSchema : loginSchema ,
 
-    // onSubmit
+     onSubmit
 
 
 
   })
 
-  // console.log(errors);
+    // console.log(errors);
 
   return (
 
     <div className="container">
       {/*<form onSubmit={handleSubmit} className="form" action="">*/}
       <form onSubmit={onSubmit} className="form" action="">
+          <ToastContainer />
         <h1 className="form__title">Iniciar Sesion</h1>
         <div className="form__container">
 
           <div className="form__control">
-           
+
+
             <input
             className="form__input"
               name="username"

@@ -2,16 +2,38 @@ import { Formik , useFormik } from "formik";
 import React from "react";
 import "../sass/login.scss";
 import loginSchema from "../schemas/validations";
-import { FcHighPriority ,FcOk } from "react-icons/fc";
+import axios from "axios";
+
+// import { FcHighPriority ,FcOk } from "react-icons/fc";
 
 
 
 
 
 //Si el usuarios digito bien los datos
-const onSubmit = () =>{
-  console.log("Submitted!");
-}
+const onSubmit = (event) => {
+  event.preventDefault();
+
+   const username = event.target.elements.username.value;
+   const password = event.target.elements.password.value;
+
+  // axios.post('/api/login', { username, password })
+  //     .then(response => {
+  //       // Almacenar el token de autenticación en el almacenamiento local o de sesión del navegador
+  //       localStorage.setItem('token', response.data.token);
+  //
+  //       // Redirigir al usuario a la página principal de la aplicación
+  //       window.location.href = '/';
+  //     })
+  //     .catch(error => {
+  //       // Mostrar un mensaje de error al usuario
+  //       alert('Error al iniciar sesión. Verifique sus credenciales.');
+  //     });
+
+
+    console.log(username)
+    console.log(password)
+ }
 
 export const Login = () => {
   //Libreria formik para la validacion de los campos
@@ -21,19 +43,24 @@ export const Login = () => {
       password: ""
     } ,
 
-    validationSchema : loginSchema ,
-    onSubmit, 
+     validationSchema : loginSchema ,
+
+    // onSubmit
+
 
 
   })
 
-  console.log(errors);
+  // console.log(errors);
 
   return (
+
     <div className="container">
-      <form onSubmit={handleSubmit} className="form" action="">
+      {/*<form onSubmit={handleSubmit} className="form" action="">*/}
+      <form onSubmit={onSubmit} className="form" action="">
         <h1 className="form__title">Iniciar Sesion</h1>
         <div className="form__container">
+
           <div className="form__control">
            
             <input
@@ -74,7 +101,7 @@ export const Login = () => {
               
           </div>
 
-          <button className="form__submit" type="submit">Entrar</button>
+          <button className="form__submit" type="submit" >Entrar</button>
         </div>
         
       </form>

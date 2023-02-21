@@ -1,6 +1,7 @@
 import { Login } from "./components/Login";
 import { useFormik } from "formik";
 import * as Yup from "yup";
+import Main from "./components/Main";
 
 
 function App() {
@@ -8,8 +9,8 @@ function App() {
   return (
       
       
-
-    <Login/> 
+     <Main/>
+    // <Login/> 
  
     
   ) ;

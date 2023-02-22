@@ -53,16 +53,28 @@
       }
     }
 
-    .container__menu {
+    .container__menu { 
       display: flex;
       gap: 0.8em;
       align-items: center;
       padding: 1.2em 0;
 
-      // &:hover  {
-      //   cursor: pointer;
-      //   background: rgb(147, 83, 244);
-      // }
+      &:hover .main__icon     {
+        cursor: pointer;
+        color:rgb(228, 199, 199);
+      }
+      
+      
+      &:hover .main__label-menu     {
+        cursor: pointer;
+        color:rgb(228, 199, 199);
+      }
+
+
+      &:hover    {
+        cursor: pointer;
+        background: #155bff;
+      }
 
     }
 
@@ -73,10 +85,7 @@
       padding: 1.2em 0;
       border-top: 1.5px solid white;
 
-      // &:hover  {
-      //   cursor: pointer;
-      //   background: rgb(147, 83, 244);
-      // }
+      
 
     }
 
@@ -86,11 +95,6 @@
       color: white;
       transition: all 300ms;
 
-      &:hover  {
-        cursor: pointer;
-        color: rgb(228, 199, 199);
-     
-      }
     }
 
    
@@ -98,6 +102,13 @@
   .main__icon{
     color: white;
     transition: all 300ms;
+
+    
+      &:hover  {
+        cursor: pointer;
+        color: rgb(228, 199, 199);
+     
+      }
 
 
 }

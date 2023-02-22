@@ -86,6 +86,24 @@
       border-top: 1.5px solid white;
 
       
+      &:hover .main__icon     {
+        cursor: pointer;
+        color:rgb(228, 199, 199);
+      }
+      
+      
+      &:hover .main__label-menu     {
+        cursor: pointer;
+        color:rgb(228, 199, 199);
+      }
+
+
+      &:hover    {
+        cursor: pointer;
+        background: #155bff;
+      }
+
+      
 
     }
 

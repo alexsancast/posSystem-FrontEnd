@@ -1,11 +1,14 @@
 import React from "react";
 import "../sass/main.scss";
 import { GiHamburgerMenu } from "react-icons/gi";
-import { FaUserCircle } from "react-icons/fa";
 import { RiTableAltFill } from "react-icons/ri";
-import { FaMoneyBill } from "react-icons/fa";
+import { FaMoneyBill , FaUserCog } from "react-icons/fa";
 import { RiInboxFill } from "react-icons/ri";
-import { FaBoxes , FaUserEdit} from "react-icons/fa";
+import { FaBoxes , FaUserEdit,FaUserCircle , FaTools} from "react-icons/fa";
+import { HiDocumentReport } from "react-icons/hi";
+import { IoMdExit } from "react-icons/io";
+
+
 
 
 
@@ -62,6 +65,28 @@ const Main = () => {
              <FaUserEdit className="main__icon" size="1.7em"/>
             <p className="main__label-menu">Contactos</p>
           </div>
+
+          <div className= "container__products-menu container__menu">
+             <HiDocumentReport className="main__icon" size="1.7em"/>
+            <p className="main__label-menu">Reportes</p>
+          </div>
+
+          <div className= "container__products-menu container__menu">
+             <FaUserCog className="main__icon" size="1.7em"/>
+            <p className="main__label-menu">Usuarios & Roles</p>
+          </div>
+
+          <div className= "container__products-menu container__menu">
+             <FaTools className="main__icon" size="1.7em"/>
+            <p className="main__label-menu">Configuraciones</p>
+          </div>
+
+          <div className= "container__products-menu container__menu-exit">
+             <IoMdExit className="main__icon" size="1.7em"/>
+            <p className="main__label-menu">Salir</p>
+          </div>
+
+          
 
 
 

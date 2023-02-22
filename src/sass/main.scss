@@ -32,7 +32,7 @@
     width: 17%;
     background: variable.$system-color;
     height: calc(100vh - 4em);
-    padding: 0.8em;
+   
     
 
     .container__username-profile {
@@ -42,7 +42,7 @@
       align-items: center;
       border-bottom: 1.5px solid white;
       border-top: 1.5px solid white;
-      padding: 1.5em 0;
+      padding: 1.5em 1em;
 
       .main__label-username {
         font-family: variable.$title-font;
@@ -57,7 +57,7 @@
       display: flex;
       gap: 0.8em;
       align-items: center;
-      padding: 1.2em 0;
+      padding: 1.2em 1em;
 
       &:hover .main__icon     {
         cursor: pointer;
@@ -82,7 +82,7 @@
       display: flex;
       gap: 0.8em;
       align-items: center;
-      padding: 1.2em 0;
+      padding: 1.2em 1em;
       border-top: 1.5px solid white;
 
       

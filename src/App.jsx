@@ -1,15 +1,15 @@
 import { Login } from "./components/Login";
 import { useFormik } from "formik";
 import * as Yup from "yup";
-import {BarHorizontal , BarVertical} from "./components/Bars";
+import {Navbarhorizontal , Navbarvertical} from "./components/Navbars";
 
 
 function App() {
   return (
     
      <>
-        <BarHorizontal/>
-          <BarVertical/>
+        <Navbarhorizontal/>
+          <Navbarvertical/>
      </>
   
       

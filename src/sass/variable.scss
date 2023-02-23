@@ -8,6 +8,13 @@ $title-font : 'McLaren',cursive;
 $sub-title-font : 'Koulen', cursive;
 $text-font:  'Varela', sans-serif;
 
-/*Font Size*/
-
+/*Resetear las configuraciones*/
+*{
+	margin: 0;
+	padding: 0;
+	list-style: none;
+	text-decoration: none;
+	border: 0;
+	box-sizing: border-box;
+}
 

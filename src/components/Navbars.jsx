@@ -7,6 +7,7 @@ import { RiInboxFill } from "react-icons/ri";
 import { FaBoxes, FaUserEdit, FaUserCircle, FaTools } from "react-icons/fa";
 import { HiDocumentReport } from "react-icons/hi";
 import { IoMdExit } from "react-icons/io";
+import { MdOutlineKeyboardArrowLeft } from "react-icons/md";
 
 const Navbarhorizontal = () => {
   return (
@@ -46,9 +47,24 @@ const Navbarvertical = () => {
           <p className="main__label-menu">Compras</p>
         </li>
 
-        <li className="container__li-products container__li">
-          <FaUserEdit className="main__icon" size="1.7em" />
-          <p className="main__label-menu">Contactos</p>
+        <li className="container__li-products container__li-sub">
+          <div className="container__icon-label">
+            <FaUserEdit className="main__icon" size="1.7em" />
+            <a href="/" className="main__label-menu">
+              Contactos
+            </a>
+            <MdOutlineKeyboardArrowLeft
+              className="main__icon-arrows"
+              size="1.7em"
+            />
+          </div>
+
+          <div className="dropdown__content">
+            <ul className="dropdown__ul">
+              <li className="dropdown__li">Clientes</li>
+              <li className="dropdown__li">Proveedor</li>
+            </ul>
+          </div>
         </li>
 
         <li className="container__li-reports container__li">

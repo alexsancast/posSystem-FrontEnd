@@ -44,7 +44,6 @@
     }
   }
   //Nav > ul
-  .ul {
     //Container main menu
     .container__li {
       display: flex;
@@ -52,6 +51,7 @@
       align-items: center;
       padding: 1.2em 1em;
 
+        //Style for text
       &:hover .main__icon {
         cursor: pointer;
         color: rgb(228, 199, 199);
@@ -67,16 +67,9 @@
         background: #155bff;
       }
 
+   
 
  
-    }
-    
-    //Style for text
-    .main__a-text {
-      font-family: variable.$title-font;
-      font-size: 1.1em;
-      color: white;
-      transition: all 300ms;
     }
     
     
@@ -108,8 +101,6 @@
   
   }
 
-
-}
 .main__icon {
   color: white;
   transition: all 300ms;
@@ -119,6 +110,13 @@
     color: rgb(228, 199, 199);
   }
 }
+.main__label-menu{
+  font-family: variable.$title-font;
+  font-size: 1.1em;
+  color: white;
+  transition: all 300ms;
+}
+
 
 
 

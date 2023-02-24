@@ -52,13 +52,25 @@
      
     //Contenedor para los submenus
     .dropdown__content{
-
       margin-left: 2.3em;
-
       .dropdown__ul{
         display: flex;
         flex-direction: column;
         gap:0.6em;
+
+
+        .dropdown__li {
+          font-family: variable.$title-font;
+          font-size: 0.9em;
+          color: white;
+          transition: all 300ms;
+
+          &:hover{
+            color: rgb(228, 199, 199);
+
+          }
+        }
+        
       }
 
     }

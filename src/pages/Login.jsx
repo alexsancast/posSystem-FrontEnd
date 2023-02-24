@@ -3,26 +3,10 @@ import React from "react";
 import "../sass/login.scss";
 import loginSchema from "../schemas/validations";
 import axios from "axios";
-import { ToastContainer, toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
+import {notify} from "../ notifications/Login.jsx";
+import {ToastContainer} from "react-toastify";
 
-// import { FcHighPriority ,FcOk } from "react-icons/fc";
-
-
-//Notificacion de error sin las credenciales estan erroneas
-
-const notify = () =>toast.error('🦄 Error al iniciar sesión. Verifique sus credenciales.!', {
-    position: "top-center",
-    autoClose: 5000,
-    hideProgressBar: false,
-    closeOnClick: true,
-    pauseOnHover: true,
-    draggable: true,
-    progress: undefined,
-    theme: "dark",
-});
-
-//Si el usuarios digito bien los datos
 
 const onSubmit = (event) => {
 

@@ -49,21 +49,32 @@
     flex-direction: column;
     gap: 0.8em;
     padding: 1.2em 1em;
+   
+
      
     //Contenedor para los submenus
     .dropdown__content{
       margin-left: 2.3em;
+      display: block;
+      transition: display .3s;
+      
+      
+     
+      
       .dropdown__ul{
         display: flex;
         flex-direction: column;
         gap:0.6em;
+        
 
 
         .dropdown__li {
           font-family: variable.$title-font;
           font-size: 0.9em;
           color: white;
-          transition: all 300ms;
+       
+          
+
 
           &:hover{
             color: rgb(228, 199, 199);
@@ -73,6 +84,11 @@
         
       }
 
+    }
+
+    .dropdown__content-none{
+      display: none;
+      transition: diplay 0.6s ease;
     }
 
     &:hover .main__icon {

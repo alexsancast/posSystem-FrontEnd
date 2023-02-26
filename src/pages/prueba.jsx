@@ -1,6 +1,6 @@
 import React from 'react';
 import {BrowserRouter,Routes,Route} from"react-router-dom";
-import {prueba1,prueba2} from "../routes/route.jsx";
+// import {prueba1,prueba2} from "../routes/route.jsx";
 
 
 
@@ -15,8 +15,8 @@ const Prueba = () => {
 
     <Routes>
 
-        <Route path="/prueba1" element={prueba1}/>
-        <Route path="/prueba2" element={prueba2}/>
+        <Route path="/prueba1" element={<prueba1/>}/>
+        <Route path="/prueba2" element={<prueba2/>}/>
 
     </Routes>
 

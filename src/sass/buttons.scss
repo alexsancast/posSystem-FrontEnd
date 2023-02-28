@@ -1,0 +1,116 @@
+@use "variable";
+
+//Boton normales agregar
+.btn-green {
+    width: 10em;
+    height: 3em;
+    border-radius: 5em;
+    color: white;
+    font-family: variable.$title-font;
+    background: variable.$system-color ;
+    transition: all 300ms;
+
+    &:hover{
+        cursor: pointer;
+        background: #1f93c8;
+
+    }
+
+}
+
+//Boton normal Cancelar
+.btn-red {
+    width: 10em;
+    height: 3em;
+    border-radius: 5em;
+    color: white;
+    font-family: variable.$title-font;
+    background: red ;
+    transition: all 300ms;
+
+    &:hover{
+        cursor: pointer;
+        background: #c8271f;
+
+    }
+
+}
+
+
+
+//Boton Medium normales agregar
+.btn-green-m {
+    width: 8em;
+    height: 2em;
+    border-radius: 5em;
+    color: white;
+    font-family: variable.$title-font;
+    background: variable.$system-color ;
+    font-size: 0.9em;
+    transition: all 300ms;
+
+    &:hover{
+        cursor: pointer;
+        background: #1f93c8;
+
+    }
+
+}
+
+//Boton Medium normales cancelar
+.btn-red-m {
+    width: 8em;
+    height: 2em;
+    border-radius: 5em;
+    color: white;
+    font-family: variable.$title-font;
+    background: red ;
+    transition: all 300ms;
+    font-size: 0.9em;
+
+    &:hover{
+        cursor: pointer;
+        background: #c8271f;
+
+    }
+
+}
+
+
+//Boton Smallnormales agregar
+.btn-green-s {
+    width: 8em;
+    height: 2em;
+    border-radius: 5em;
+    color: white;
+    font-family: variable.$title-font;
+    background: variable.$system-color ;
+    font-size: 0.9em;
+    transition: all 300ms;
+
+    &:hover{
+        cursor: pointer;
+        background: #1f93c8;
+
+    }
+
+}
+
+//Boton Small normales cancelar
+.btn-red-s {
+    width: 8em;
+    height: 2em;
+    border-radius: 5em;
+    color: white;
+    font-family: variable.$title-font;
+    background: red ;
+    transition: all 300ms;
+    font-size: 0.9em;
+
+    &:hover{
+        cursor: pointer;
+        background: #c8271f;
+
+    }
+
+}

@@ -1,17 +1,25 @@
+import { Login } from "./pages/Login";
+import { useFormik } from "formik";
+import * as Yup from "yup";
+import {Navbarhorizontal , Navbarvertical} from "./components/Navbars";
+import { ButtonS , Button , ButtonM } from "./components/Buttons";
+import {Inputs} from "./components/Inputs"
 
-import { BrowserRouter } from "react-router-dom";
-import Rutas from "./routes/route"
 
 
-function App()
-{
+function App() {
+  return (
+    
+     <> 
 
-  return  ( 
-    <BrowserRouter>
-     <Rutas/> 
-    </BrowserRouter>
-  )
+     <Login/>
 
+     </>
+  
+      
+
+    // <Login/>
+  );
 }
 
 export default App;

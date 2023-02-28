@@ -9,35 +9,14 @@ import {notify} from "../ notifications/Login.jsx";
 
 
 
-const onSubmit = (event) => {
-
-  event.preventDefault();
 
 
-   const username = event.target.elements.username.value;
-   const password = event.target.elements.password.value;
-
-  axios.post('/api/login', { username, password })
-      .then(response => {
-        // Almacenar el token de autenticación en el almacenamiento local o de sesión del navegador
-        localStorage.setItem('token', response.data.token);
 
 
-        // Redirigir al usuario a la página principal de la aplicación
-        window.location.href = '/';
-
-
-      })
-      .catch(error => {
-        // Mostrar un mensaje de error al usuario
-          notify()
-        // alert('Error al iniciar sesión. Verifique sus credenciales.');
-      });
-
-
-    console.log(username)
-    console.log(password)
- }
+//Si el usuarios digito bien los datos procede a validar con la DB
+const onSubmit = () =>{
+  console.log("Submitted!");
+}
 
 export const Login = () => {
   //Libreria formik para la validacion de los campos

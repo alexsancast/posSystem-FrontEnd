@@ -1,0 +1,114 @@
+@use "variable";
+
+//Bar horizontal
+.container__nav-horizontal {
+  width: 100%;
+  background: variable.$system-color;
+  height: 4em;
+  padding: 1em 1em;
+  display: flex;
+  flex-direction: row;
+
+  .title__homepage {
+
+    display: flex;
+    align-items: center;
+    font-family: variable.$title-font;
+    color: white;
+    margin-top: auto;
+    margin-bottom: auto;
+    margin-left: auto;
+  }
+}
+
+//Bar Vertical
+.container__nav-vertical {
+  width: 17%;
+  background: variable.$system-color;
+  height: calc(100vh - 4em);
+
+  //Container username
+  .container__username-profile {
+    display: flex;
+    width: 100%;
+    gap: 1.3em;
+    align-items: center;
+    border-bottom: 1.5px solid white;
+    border-top: 1.5px solid white;
+    padding: 1.5em 1em;
+
+    .main__label-username {
+      font-family: variable.$title-font;
+      font-size: 1.2em;
+      color: white;
+    }
+  }
+
+ 
+  //Para los menus generales
+  .container__a {
+    display: flex;
+    gap: 0.8em;
+    align-items: center;
+    padding: 1.2em 1em;
+
+    //Style for text
+    &:hover .main__icon {
+      cursor: pointer;
+      color: rgb(228, 199, 199);
+    }
+
+    &:hover .main__label-menu {
+      cursor: pointer;
+      color: rgb(228, 199, 199);
+    }
+
+    &:hover {
+      cursor: pointer;
+      background: #155bff;
+    }
+  }
+
+  //Container btn exit
+  .container__a-exit {
+    display: flex;
+    gap: 0.8em;
+    align-items: center;
+    padding: 1.2em 1em;
+    border-top: 1.5px solid white;
+
+    &:hover .main__icon {
+      cursor: pointer;
+      color: rgb(228, 199, 199);
+    }
+
+    &:hover .main__label-menu {
+      cursor: pointer;
+      color: rgb(228, 199, 199);
+    }
+
+    &:hover {
+      cursor: pointer;
+      background: #155bff;
+    }
+  }
+}
+
+//Diseno para los iconos del menu
+.main__icon {
+  color: white;
+  transition: all 300ms;
+
+  &:hover {
+    cursor: pointer;
+    color: rgb(228, 199, 199);
+  }
+}
+
+//Formatos para las letras del menu
+.main__label-menu {
+  font-family: variable.$title-font;
+  font-size: 1.1em;
+  color: white;
+  transition: all 300ms;
+}

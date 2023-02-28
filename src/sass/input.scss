@@ -1,0 +1,65 @@
+@use "variable";
+
+
+.container__input{
+    position: relative;
+    color: red;
+    width: 10em;
+
+
+
+     .input {
+        width: 100%;
+        background: none;
+        color: rgb(160, 155, 155);
+        font-size: 1.4rem;
+        padding: 0.6em 0.3em;
+        border: none;
+        outline: none;
+        border-bottom: 1px solid black;
+        font-family: variable.$text-font;
+
+
+        &:focus + .label,
+        &:not(:placeholder-shown) + .label {
+          transform: translateY(-12px) scale(0.8);
+          transform-origin: left top;
+          color: #00aeff;
+        }
+
+        &:focus ~ .input__line,
+        &:not(:placeholder-shown) ~ .input__line {
+          transform: scale(1);
+          background:  #00aeff;
+        }
+
+        
+     }
+
+     .label{
+        color: #cfd1ce;
+        font-size: 1.2em;
+        cursor: pointer;
+        position: absolute;
+        left: 5px;
+        top: 0;
+        transform: translateY(5px);
+        transition: transform 0.5s, color 0.3s;
+        font-family: variable.$title-font;
+     }
+
+     .input__line{
+        position: absolute;
+        bottom: 0px;
+        left: 0;
+        width: 100%;
+        height: 1px;
+        background-color: red;
+        transform: scale(0);
+        transform: left bottom;
+        transition: transform 0.4s;
+
+     }
+
+
+}

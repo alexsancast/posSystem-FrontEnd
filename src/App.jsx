@@ -3,13 +3,17 @@ import { useFormik } from "formik";
 import * as Yup from "yup";
 import {Navbarhorizontal , Navbarvertical} from "./components/Navbars";
 import { ButtonS , Button , ButtonM } from "./components/Buttons";
+import {Inputs} from "./components/Inputs"
+
 
 
 function App() {
   return (
     
-     <>
-        <Button color = {false} label = "Cancelar"/>
+     <> 
+
+     <Inputs desc = "Proveedor"/>
+
      </>
   
       

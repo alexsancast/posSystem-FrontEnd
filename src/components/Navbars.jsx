@@ -4,7 +4,7 @@ import { GiHamburgerMenu } from "react-icons/gi";
 import { RiTableAltFill } from "react-icons/ri";
 import { FaMoneyBill, FaUserCog } from "react-icons/fa";
 import { RiInboxFill } from "react-icons/ri";
-import { FaBoxes, FaUserEdit, FaUserCircle, FaTools } from "react-icons/fa";
+import { FaBoxes, FaUserEdit, FaUserCircle, FaTools , FaUsersCog ,FaIdCardAlt } from "react-icons/fa";
 import { HiDocumentReport } from "react-icons/hi";
 import { IoMdExit } from "react-icons/io";
 import { MdOutlineKeyboardArrowLeft } from "react-icons/md";
@@ -19,8 +19,8 @@ const Navbarhorizontal = () => {
 };
 
 const Navbarvertical = () => {
-  const [state, setState] = useState(false);
-  const dropdownMenu = () => setState((prevent) => !prevent); // Funcion para establecer el valor en true / false
+  // const [state, setState] = useState(false);
+  // const dropdownMenu = () => setState((prevent) => !prevent); // Funcion para establecer el valor en true / false
 
   return (
     <nav className="container__nav-vertical">
@@ -30,64 +30,67 @@ const Navbarvertical = () => {
       </div>
 
       <ul className="ul">
-        <li className="container__li-menu container__li">
-          <RiTableAltFill className="main__icon" size="1.7em" />
-          <p className="main__label-menu">Tablero principal</p>
+        <li className="container__li-table ">
+          <a href="/" className="container__a">
+            <RiTableAltFill className="main__icon" size="1.7em" />
+            <p className="main__label-menu">Tablero principal</p>
+          </a>
         </li>
 
-        <li className="container__li-caja container__li">
-          <FaMoneyBill className="main__icon" size="1.7em" />
-          <p className="main__label-menu">Caja</p>
+        <li className="container__li-caja ">
+          <a href="" className="container__a">
+            <FaMoneyBill className="main__icon" size="1.7em" />
+            <p className="main__label-menu">Caja</p>
+          </a>
         </li>
 
-        <li className="container__li-products container__li">
-          <RiInboxFill className="main__icon" size="1.7em" />
-          <p className="main__label-menu">Productos</p>
+        <li className="container__li-products ">
+          <a href="" className="container__a">
+            <RiInboxFill className="main__icon" size="1.7em" />
+            <p className="main__label-menu">Productos</p>
+          </a>
         </li>
 
-        <li className="container__li-shopping container__li">
-          <FaBoxes className="main__icon" size="1.7em" />
-          <p className="main__label-menu">Compras</p>
-        </li>
-
-        <li className="container__li-products container__li-sub" >
-          <div className="container__icon-label" onClick={dropdownMenu} >
+        <li className="container__li-products ">
+          <a href="" className="container__a">
             <FaUserEdit className="main__icon" size="1.7em" />
-            <a  href="#" className="main__label-menu">
-              Contactos
-            </a>
-            <MdOutlineKeyboardArrowLeft
-              className="main__icon-arrows"
-              size="1.7em"
-            />
-          </div>
-
-          <div className={state ? "dropdown__content" : "dropdown__content-none"} >
-            <ul className="dropdown__ul">
-              <li className="dropdown__li">Clientes</li>
-              <li className="dropdown__li">Proveedor</li>
-            </ul>
-          </div>
+            <p className="main__label-menu">Clientes</p>
+          </a>
         </li>
 
-        <li className="container__li-reports container__li">
-          <HiDocumentReport className="main__icon" size="1.7em" />
-          <p className="main__label-menu">Reportes</p>
+        <li className="container__li-reports ">
+          <a href="" className="container__a">
+            <FaIdCardAlt className="main__icon" size="1.7em" />
+            <p className="main__label-menu">Proveedores</p>
+          </a>
         </li>
 
-        <li className="container__li-users container__li">
-          <FaUserCog className="main__icon" size="1.7em" />
-          <p className="main__label-menu">Usuarios & Roles</p>
+        <li className="container__li-users ">
+          <a href="" className="container__a">
+            <FaUsersCog className="main__icon" size="1.7em" />
+            <p className="main__label-menu">Usuarios & Roles</p>
+          </a>
         </li>
 
-        <li className="container__li-tools container__li">
-          <FaTools className="main__icon" size="1.7em" />
-          <p className="main__label-menu">Configuraciones</p>
+        <li className="container__li-reports ">
+          <a href="" className="container__a">
+            <HiDocumentReport className="main__icon" size="1.7em" />
+            <p className="main__label-menu">Reportes</p>
+          </a>
         </li>
 
-        <li className="container__li-exit container__li-exit">
-          <IoMdExit className="main__icon" size="1.7em" />
-          <p className="main__label-menu">Salir</p>
+        <li className="container__li-tools ">
+          <a href="" className="container__a">
+            <FaTools className="main__icon" size="1.7em" />
+            <p className="main__label-menu">Configuraciones</p>
+          </a>
+        </li>
+
+        <li className="container__li-exit ">
+          <a href="" className="container__a-exit">
+            <IoMdExit className="main__icon" size="1.7em" />
+            <p className="main__label-menu">Salir</p>
+          </a>
         </li>
       </ul>
     </nav>

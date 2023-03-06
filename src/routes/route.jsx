@@ -1,6 +1,7 @@
 import React from 'react'
 import {Routes, Route } from "react-router-dom";
-import {Login} from '../pages/Login';
+import {Login} from '../components/Login.jsx';
+import {Bar} from '../components/mesas.jsx';
 
 
 
@@ -9,7 +10,8 @@ export default function Rutas() {
   return (
     
     <Routes>
-      <Route path="/"  element = {<Login/>} />
+      {/*<Route path="/"  element = {<Login/>} />*/}
+      <Route path="/"  element = {<Bar/>} />
 
 
     </Routes>

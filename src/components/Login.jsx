@@ -1,7 +1,7 @@
 import React from "react";
 import { useFormik } from "formik";
 import "../sass/login.scss";
-import loginSchema from "../schemas/validations";
+import loginSchema from "../schemas/validations.jsx";
 import axios from "axios";
 import {ToastContainer} from "react-toastify";
 import 'react-toastify/dist/ReactToastify.css';
@@ -58,7 +58,7 @@ export const Login = () => {
 
     <div className="container">
       {/*<form onSubmit={handleSubmit} className="form" action="">*/}
-      <form onSubmit={onSubmit} className="form" action="">
+      <form onSubmit={onSubmit} className="form" action="src/pages">
           <ToastContainer />
         <h1 className="form__title">Iniciar Sesion</h1>
         <div className="form__container">

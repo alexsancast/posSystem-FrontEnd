@@ -1,7 +1,7 @@
 import React from 'react'
 import {Routes, Route } from "react-router-dom";
-import {Login} from '../components/Login.jsx';
-import {Bar} from '../components/mesas.jsx';
+import {Login} from '../pages/Login.jsx';
+import {Bar} from '../pages/Table.jsx';
 
 
 

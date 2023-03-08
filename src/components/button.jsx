@@ -1,20 +1,22 @@
 import React, {useState} from "react";
 
 
-let p = true
+
 
 export function Mesa() {
+    let isBusy = true
 
     const [buttonColor, setButtonColor] = useState('green');
 
     const handleClick = () => {
 
-        if (p===true){
+        if (isBusy===true){
             setButtonColor('red')
 
-            p=false
-        } else if(p===false){
-            p=true
+
+            isBusy=false
+        } else if(isBusy===false){
+            isBusy=true
             setButtonColor('green')
 
         }
@@ -29,6 +31,7 @@ export function Mesa() {
            <div >
             <button  style={{ backgroundColor: buttonColor }} onClick={handleClick}>
                 <img  src="src/assets/restaurant.png" alt=""/>
+
             </button>
 
         </div>
